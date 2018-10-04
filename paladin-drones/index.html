@@ -10,42 +10,31 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.5.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.5.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.5.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.5.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.5.2/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/index.js"></script>
+
 
   </head>
 
   <body>
+
     <div class="header-wrap">
       <div class="logo-font">Paladin</div>
+      <h4 onclick="openNav()">Menu</h4>
+      <div id="nav-icon3" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="nav-content sidenav" id="mySidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="nav-item">Mission</div>
+        <a href="#mission" class="nav-item">Mission</a>
         <div class="nav-item">Software</div>
         <div class="nav-item">Team</div>
         <div class="nav-item">Contact</div>
         <div class="nav-item">Press</div>
       </div>
-      <h4 onclick="openNav()">Menu</h4>
-      <i class="material-icons hamburger" onclick="openNav()"> menu </i>
     </div>
-
-    <!-- <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div> -->
 
     <div class="container" id="main">
       <div class="main">
@@ -55,7 +44,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="section">
+      <div class="section" id="mission">
         <h1> Mission </h1>
         <p>A fire doubles in size every 30 seconds.</p>
         <p>When dealing with emergencies, every single second could mean the difference between life and death. But so many public agencies simply don't know enough when at the scene. The location could be inaccurate, or there could be a traffic jam, and the only way to find out is after reaching there. This wastes time, and in an era where information is availible a fingertouch away, it's unacceptable for everyday heroes to not have the same access.</p>

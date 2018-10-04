@@ -3,8 +3,76 @@ body {
   font-family: Ubuntu;
   color: #F9FBFF; }
 
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 27px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: block;
+  align-self: flex-end;
+  top: 0;
+  right: 0;
+  margin: 10px; }
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #F9FBFF;
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px; }
+
+#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+  top: 9px; }
+
+#nav-icon3 span:nth-child(4) {
+  top: 18px; }
+
+#nav-icon3.open span:nth-child(1) {
+  top: 9px;
+  width: 0%;
+  left: 50%; }
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
 .sidenav {
-  height: 100%;
+  height: 40px;
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
@@ -14,24 +82,27 @@ body {
   /* Stay on top */
   top: 0;
   /* Stay at the top */
-  right: 0;
-  background-color: #111;
+  right: 40px;
+  background-color: #1D1E21;
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */ }
+  /* 0.5 second transition effect to slide in the sidenav */
+  padding-top: 10px; }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
   transition: 0.3s; }
+  .sidenav a:link, .sidenav a:hover, .sidenav a:visited, .sidenav a:focus {
+    color: #F9FBFF;
+    text-decoration: none; }
+  .sidenav a.nav-item {
+    padding: 10px;
+    font-weight: 400;
+    cursor: pointer; }
+    .sidenav a.nav-item:hover {
+      font-weight: 600; }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
@@ -40,10 +111,10 @@ body {
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-right: 50px; }
+  right: 12px;
+  margin-top: 2px;
+  transform: scale(1.4);
+  font-weight: 800; }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
@@ -62,7 +133,7 @@ body {
   width: 100vw;
   left: 0;
   height: 44px;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
@@ -86,6 +157,8 @@ body {
     padding: 10px 10px 10px 5px;
     font-size: 30px;
     cursor: pointer; }
+  .header-wrap a {
+    display: inline-block; }
   .header-wrap .nav-content {
     display: flex;
     align-items: center;
@@ -117,7 +190,8 @@ body {
     max-width: 380px;
     margin: 20px 0; }
     .container h2.fire {
-      color: #FF895C; }
+      color: #FF895C;
+      background: #edf0fd; }
   .container .section {
     width: 100vw;
     max-width: 700px;
