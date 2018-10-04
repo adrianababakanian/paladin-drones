@@ -1,15 +1,151 @@
 body {
+  background: #1D1E21;
+  font-family: Ubuntu;
+  color: #F9FBFF; }
+
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  right: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1; }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px; }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-right .5s;
+  padding: 20px; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+.header-wrap {
+  align-self: flex-start;
+  width: 100vw;
+  left: 0;
+  height: 44px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .header-wrap .logo-font {
+    font-family: Ubuntu;
+    color: #F9FBFF;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    padding: 10px; }
+  .header-wrap h4 {
+    display: inline-block;
+    align-self: center;
+    font-weight: 300;
+    font-size: 16px;
+    cursor: pointer; }
+  .header-wrap .hamburger {
+    padding: 10px 10px 10px 5px;
+    font-size: 30px;
+    cursor: pointer; }
+  .header-wrap .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .header-wrap .nav-content .nav-item {
+      padding: 10px;
+      font-weight: 400;
+      cursor: pointer; }
+      .header-wrap .nav-content .nav-item:hover {
+        font-weight: 600; }
+
+.container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: #161417;
-  height: 100vh; }
-
-.section {
-  width: 100vw;
-  max-width: 700px;
-  height: 80vh;
-  background: #262328;
-  border-radius: 4px; }
+  justify-content: center; }
+  .container#main {
+    height: calc(100vh - 30px); }
+  .container .main {
+    width: 700px;
+    height: 500px; }
+  .container h1 {
+    font-size: 64px;
+    font-weight: 800;
+    margin: 0; }
+  .container h2 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 42px;
+    max-width: 380px;
+    margin: 20px 0; }
+    .container h2.fire {
+      color: #FF895C; }
+  .container .section {
+    width: 100vw;
+    max-width: 700px;
+    height: calc(80vh - 40px);
+    padding: 20px 0;
+    background: #242528;
+    border-radius: 4px; }
+    .container .section > * {
+      padding-left: 50px; }
+    .container .section h1 {
+      font-weight: 600;
+      font-size: 36px;
+      margin: 30px 0; }
+    .container .section p {
+      font-size: 16px;
+      line-height: 36px;
+      font-family: Ubuntu;
+      font-weight: 300;
+      width: calc(100% - 120px); }
+      .container .section p a {
+        background: #3C3A3E;
+        padding: 6px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 400;
+        transition: background 0.3s ease-in-out; }
+        .container .section p a:hover {
+          font-weight: 600;
+          background: #535155; }
 
 /*# sourceMappingURL=common.css.map */
