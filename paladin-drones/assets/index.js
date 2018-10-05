@@ -18,5 +18,7 @@ $(document).ready(function(){
       document.getElementById("mySidenav").style.width = "500px";
     }
     $(this).toggleClass('open');
+    $('#menu').toggleClass('open');
   });
+
 });

@@ -3,7 +3,7 @@ body {
   font-family: Ubuntu;
   color: #F9FBFF; }
 
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+#nav-icon3 {
   width: 27px;
   height: 20px;
   position: relative;
@@ -20,7 +20,8 @@ body {
   align-self: flex-end;
   top: 0;
   right: 0;
-  margin: 10px; }
+  margin: 13px 10px;
+  z-index: 1000; }
 
 #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
   display: block;
@@ -82,7 +83,7 @@ body {
   /* Stay on top */
   top: 0;
   /* Stay at the top */
-  right: 40px;
+  right: 0;
   background-color: #1D1E21;
   /* Black*/
   overflow-x: hidden;
@@ -147,6 +148,11 @@ body {
     position: absolute;
     left: 0;
     padding: 10px; }
+  .header-wrap #menu {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out; }
+    .header-wrap #menu.open {
+      opacity: 0; }
   .header-wrap h4 {
     display: inline-block;
     align-self: center;
@@ -178,20 +184,33 @@ body {
     height: calc(100vh - 30px); }
   .container .main {
     width: 700px;
-    height: 500px; }
+    height: 500px;
+    position: relative; }
   .container h1 {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 800;
-    margin: 0; }
+    margin: 0;
+    text-align: center;
+    display: block; }
   .container h2 {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 42px;
-    max-width: 380px;
-    margin: 20px 0; }
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 34px;
+    max-width: 240px;
+    margin: 20px auto;
+    text-align: center; }
     .container h2.fire {
+      font-size: 16px;
+      max-width: 180px;
       color: #FF895C;
-      background: #edf0fd; }
+      transition: background 0.3s ease-in-out;
+      padding: 10px 20px;
+      background: #242528;
+      border-radius: 4px;
+      margin: 140px auto 0 auto;
+      cursor: pointer; }
+      .container h2.fire:hover {
+        background: #3C3A3E; }
   .container .section {
     width: 100vw;
     max-width: 700px;
@@ -202,6 +221,7 @@ body {
     .container .section > * {
       padding-left: 50px; }
     .container .section h1 {
+      text-align: left;
       font-weight: 600;
       font-size: 36px;
       margin: 30px 0; }

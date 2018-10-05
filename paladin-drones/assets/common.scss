@@ -12,7 +12,7 @@ body {
   color: $font;
 }
 
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+#nav-icon3 {
   width: 27px;
   height: 20px;
   position: relative;
@@ -29,7 +29,8 @@ body {
   align-self: flex-end;
   top: 0;
   right: 0;
-  margin: 10px;
+  margin: 13px 10px;
+  z-index: 1000;
 }
 
 #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
@@ -95,7 +96,7 @@ body {
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-    right: 40px;
+    right: 0;
     background-color: $background; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -165,6 +166,13 @@ body {
     left: 0;
     padding: 10px;
   }
+  #menu {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+    &.open {
+      opacity: 0;
+    }
+  }
   h4 {
     display: inline-block;
     align-self: center;
@@ -208,23 +216,38 @@ body {
   .main {
     width: 700px;
     height: 500px;
+    position: relative;
   }
 
   h1 {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 800;
     margin: 0;
+    text-align: center;
+    display: block;
   }
+
   h2 {
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 42px;
-    max-width: 380px;
-    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 34px;
+    max-width: 240px;
+    margin: 20px auto;
+    text-align: center;
 
     &.fire {
+      font-size: 16px;
+      max-width: 180px;
       color: #FF895C;
-      background: #edf0fd;
+      transition: background 0.3s ease-in-out;
+      padding: 10px 20px;
+      background: $section;
+      border-radius: 4px;
+      margin: 140px auto 0 auto;
+      cursor: pointer;
+      &:hover {
+        background: $em;
+      }
     }
   }
 
@@ -241,7 +264,9 @@ body {
    }
 
    h1 {
+     text-align: left;
      font-weight: 600;
+
      font-size: 36px;
      margin: 30px 0;
    }
