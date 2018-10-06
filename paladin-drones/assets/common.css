@@ -2,7 +2,8 @@ body {
   background: #1D1E21;
   font-family: Ubuntu;
   color: #F9FBFF;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0; }
   body.light {
     background: #F9FBFF; }
 
@@ -113,7 +114,7 @@ body {
     background: #F9FBFF; }
 
 .sidenav {
-  height: 40px;
+  height: 30px;
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
@@ -183,8 +184,13 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  z-index: 3; }
+  z-index: 3;
+  background: #1D1E21;
+  margin: 0; }
+  .header-wrap.light {
+    background: #F9FBFF; }
   .header-wrap .logo-font {
+    z-index: 20;
     margin: 0;
     font-family: Ubuntu;
     font-weight: 800;
@@ -284,7 +290,11 @@ body {
     margin: 0 auto;
     padding: 80px 0;
     width: 100vw;
-    max-width: 900px; }
+    max-width: 1000px; }
+    .container .section-wrapper#software {
+      max-width: 1000px; }
+    .container .section-wrapper#team {
+      max-width: 1000px; }
   .container .section {
     padding: 20px 0;
     border-radius: 4px;
@@ -348,6 +358,23 @@ body {
           background: #F9FBFF; }
           .container .section p a.light:hover {
             background: white; }
+    .container .section .row {
+      width: 100%;
+      overflow: auto;
+      margin-left: -20px; }
+      .container .section .row .column {
+        max-height: 580px;
+        border-radius: 4px;
+        overflow: scroll;
+        background: #242528;
+        width: calc(50% - 80px);
+        float: left;
+        margin: 10px;
+        padding: 0 30px; }
+        .container .section .row .column p {
+          width: 100%; }
+        .container .section .row .column.light {
+          background: #F5F7FB; }
     .container .section #team {
       max-width: 1000px; }
     .container .section .team {
