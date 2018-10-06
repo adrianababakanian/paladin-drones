@@ -154,7 +154,7 @@ body {
     right: 0;
     background-color: $background; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     padding-top: 10px;
     &.light {
       background: $font;
@@ -346,23 +346,23 @@ body {
 
   .section-wrapper {
     margin: 0 auto;
-    padding: calc((20vh + 40px)/2) 0;
+    //padding: calc((20vh + 40px)/2) 0;
+    padding: 80px 0;
     width: 100vw;
-    max-width: 700px;
+    max-width: 900px;
   }
 
   .section {
-   width: 100%;
-   max-height: calc(80vh - 40px);
+   width: calc(100% - 100px);
+   //max-height: calc(80vh - 40px);
    padding: 20px 0;
-   background: $section;
+   // background: $section;
    border-radius: 4px;
    position: relative;
-   overflow: scroll;
 
 
    &.show { display: block; }
-   &.light { background: $hi; }
+   // &.light { background: $hi; }
    > * { padding-left: 50px; }
 
    a {
@@ -440,7 +440,7 @@ body {
    }
 
    .screen {
-     width: calc(100% - 100px);
+     width: 100%;
      padding-top: 30px;
      padding-bottom: 30px;
    }
