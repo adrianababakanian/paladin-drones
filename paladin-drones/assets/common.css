@@ -20,7 +20,7 @@ body {
   border-radius: 2px;
   background-color: #3C3A3E; }
 .body.light::-webkit-scrollbar-thumb {
-  background-color: #EBECEF; }
+  background-color: #F3F6FB; }
 
 .gray {
   color: #3C3A3E;
@@ -29,7 +29,7 @@ body {
   .gray.left {
     padding-right: 5px; }
   .gray.light {
-    color: #EBECEF; }
+    color: #F3F6FB; }
 
 #nav-icon3 {
   width: 27px;
@@ -48,7 +48,7 @@ body {
   align-self: flex-end;
   top: 0;
   right: 0;
-  margin: 13px 10px;
+  margin: 10px;
   z-index: 1000; }
 
 .back {
@@ -142,8 +142,7 @@ body {
     color: #F9FBFF;
     text-decoration: none; }
     .sidenav a:link.light, .sidenav a:hover.light, .sidenav a:visited.light, .sidenav a:focus.light {
-      color: #1D1E21;
-      background: #F9FBFF; }
+      color: #1D1E21; }
   .sidenav a.nav-item {
     padding: 10px;
     font-weight: 400;
@@ -337,7 +336,7 @@ body {
       padding: 0;
       border-radius: 4px; }
       .container .section .placeholder.light {
-        background: #EBECEF; }
+        background: #F3F6FB; }
     .container .section p {
       font-size: 16px;
       line-height: 36px;
@@ -345,6 +344,8 @@ body {
       font-weight: 300;
       width: calc(100% - 120px); }
       .container .section p a {
+        text-decoration: none;
+        color: #F9FBFF;
         background: #3C3A3E;
         padding: 8px 10px;
         border-radius: 4px;
@@ -354,10 +355,6 @@ body {
         .container .section p a:hover {
           font-weight: 600;
           background: #535155; }
-        .container .section p a.light {
-          background: #F9FBFF; }
-          .container .section p a.light:hover {
-            background: white; }
     .container .section .row {
       width: 100%;
       overflow: auto;
@@ -374,7 +371,7 @@ body {
         .container .section .row .column p {
           width: 100%; }
         .container .section .row .column.light {
-          background: #F5F7FB; }
+          background: #F3F6FB; }
     .container .section #team {
       max-width: 1000px; }
     .container .section .team {
@@ -393,7 +390,7 @@ body {
         .container .section .team .member p {
           width: 100%; }
         .container .section .team .member.light {
-          background: #F5F7FB; }
+          background: #F3F6FB; }
     .container .section .screen {
       width: 100%;
       padding-top: 30px;
@@ -407,11 +404,18 @@ body {
       .container .section .photo img {
         width: 100%;
         height: auto; }
-    .container .section .press-item {
-      width: 100%; }
-      .container .section .press-item .link {
-        float: left; }
-      .container .section .press-item .title {
+    .container .section .entry {
+      width: 100%;
+      overflow: auto;
+      margin: 20px 0; }
+      .container .section .entry a {
+        margin: 0; }
+      .container .section .entry p {
+        display: inline-block;
+        width: initial;
+        margin: 0;
+        padding: 0 20px; }
+      .container .section .entry > * {
         float: left; }
 
 /*# sourceMappingURL=common.css.map */
