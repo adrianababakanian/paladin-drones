@@ -430,7 +430,6 @@ body.light::-webkit-scrollbar-thumb {
       overflow: auto;
       margin-left: -10px; }
       .container .section .row .column {
-        max-height: 580px;
         border-radius: 4px;
         overflow: scroll;
         background: #242528;
@@ -449,60 +448,60 @@ body.light::-webkit-scrollbar-thumb {
       @media (max-width: 700px) {
         .container .section .row {
           width: calc(100% - 20px);
-          margin-left: -10px; }
+          margin-left: 0; }
           .container .section .row .column {
             width: calc(100% - 60px);
             margin: 0; } }
+    .container .section .member {
+      background: #242528;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      width: calc(100%);
+      padding: 0;
+      margin: 0; }
+      .container .section .member h2 {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .container .section .member h2.arrow {
+          padding: 10px 0; }
+      .container .section .member.light {
+        background: #F3F6FB; }
+      .container .section .member .info {
+        padding: 20px 0 0 0; }
+      .container .section .member p {
+        text-align: left;
+        text-justify: inter-word;
+        width: 100%;
+        padding: 0;
+        margin: 0; }
+        @media (max-width: 1200px) {
+          .container .section .member p {
+            padding: 0 20px; } }
+      @media (max-width: 1200px) {
+        .container .section .member {
+          width: calc(100%); } }
     .container .section .team {
       height: auto;
       overflow: auto;
-      margin-left: -40px; }
+      margin-left: -10px; }
       .container .section .team .member-wrapper {
         border-radius: 4px;
         width: calc(50% - 80px);
         float: left;
-        margin: 20px;
-        padding: 20px; }
+        margin: 10px; }
         @media (max-width: 1200px) {
           .container .section .team .member-wrapper {
             width: calc(50% - 25px);
-            margin: 2.5px;
-            padding: 10px; } }
+            margin: 2.5px; } }
         @media (max-width: 900px) {
           .container .section .team .member-wrapper {
             margin-left: 10px;
-            width: calc(100% - 40px);
-            padding: 20px; } }
+            width: calc(100% - 40px); } }
         .container .section .team .member-wrapper:hover p {
           padding: 0;
           display: block; }
-        .container .section .team .member-wrapper .member {
-          background: #242528;
-          padding-bottom: 20px;
-          padding-top: 20px; }
-          .container .section .team .member-wrapper .member h2 {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center; }
-            .container .section .team .member-wrapper .member h2.arrow {
-              padding: 10px 0; }
-          .container .section .team .member-wrapper .member.light {
-            background: #F3F6FB; }
-          .container .section .team .member-wrapper .member .info {
-            padding: 20px 0 0 0; }
-          .container .section .team .member-wrapper .member p {
-            text-align: left;
-            text-justify: inter-word;
-            width: calc(100% - 80px);
-            padding: 0 40px;
-            margin: 0; }
-            @media (max-width: 1200px) {
-              .container .section .team .member-wrapper .member p {
-                padding: 0 20px; } }
-          @media (max-width: 1200px) {
-            .container .section .team .member-wrapper .member {
-              width: calc(100%); } }
     .container .section .screen {
       width: 100%;
       padding-top: 30px;
