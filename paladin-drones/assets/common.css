@@ -361,18 +361,30 @@ body {
       overflow: auto;
       margin-left: -20px; }
       .container .section .team .member {
-        max-height: 580px;
         border-radius: 4px;
-        overflow: scroll;
         background: #242528;
         width: calc(50% - 80px);
         float: left;
         margin: 20px;
         padding: 20px; }
+        .container .section .team .member:hover p {
+          padding: 0;
+          display: block; }
+        .container .section .team .member h2 {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .container .section .team .member h2.arrow {
+            padding: 10px 0; }
         .container .section .team .member p {
+          padding: 0;
+          display: none;
           width: 100%; }
         .container .section .team .member.light {
           background: #F3F6FB; }
+        .container .section .team .member .info {
+          padding: 20px 0 0 0; }
     .container .section .screen {
       width: 100%;
       padding-top: 30px;
@@ -381,8 +393,9 @@ body {
       width: 200px;
       height: 200px;
       border-radius: 4px;
-      padding: 0 0 30px 0;
-      overflow: hidden; }
+      overflow: hidden;
+      margin: 0 auto;
+      padding-top: 10px; }
       .container .section .photo img {
         width: 100%;
         height: auto; }
