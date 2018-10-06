@@ -492,42 +492,58 @@ a {
    .team {
      height: auto;
      overflow: auto;
-     margin-left: -20px;
-     .member {
+     margin-left: -40px;
+     .member-wrapper {
        border-radius: 4px;
-       background: $section;
        width: calc(50% - 80px);
        float: left;
        margin: 20px;
        padding: 20px;
-
+       @media (max-width: 1200px) {
+         width: calc(50% - 25px);
+         margin: 2.5px;
+         padding: 10px;
+       }
+       @media (max-width: 900px) {
+         width: calc(100% - 40px);
+         padding: 20px;
+       }
        &:hover {
          p {
            padding: 0;
            display: block;
          }
        }
-
-       h2 {
-         text-align: center;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         &.arrow {
-           padding: 10px 0;
+       .member {
+         background: $section;
+         padding-bottom: 20px;
+         padding-top: 20px;
+         h2 {
+           text-align: center;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           &.arrow {
+             padding: 10px 0;
+           }
          }
-       }
+         &.light {
+           background: $hi_dark;
+         }
+         .info {
+           padding: 20px 0 0 0;
+         }
+         p {
+           text-align: left;
+           text-justify: inter-word;
+           width: calc(100% - 80px);
+           padding: 0 40px;
+           margin: 0;
+           @media (max-width: 1200px) {
+             padding: 0 20px;
+           }
+         }
 
-       p {
-         padding: 0;
-         display: none;
-         width: 100%;
-       }
-       &.light {
-         background: $hi_dark;
-       }
-       .info {
-         padding: 20px 0 0 0;
        }
      }
    }
