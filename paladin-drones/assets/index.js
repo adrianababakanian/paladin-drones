@@ -38,18 +38,19 @@ $(document).ready(function(){
      });
 });
 
-var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   if (st > 0){
-       // downscroll code
-       $('.main').addClass('shift');
-       console.log(st);
-   } else {
-      // upscroll code
-   }
-   lastScrollTop = st;
-});
+// var lastScrollTop = 0;
+// $(window).scroll(function(event){
+//    var st = $(this).scrollTop();
+//    if (st > 0){
+//        // downscroll code
+//        $('.main').addClass('shift');
+//        console.log(st);
+//    } else {
+//      $('.main').removeClass('shift');
+//       // upscroll code
+//    }
+//    lastScrollTop = st;
+// });
 
 
 function toggleNav() {

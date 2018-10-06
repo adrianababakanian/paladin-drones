@@ -2,7 +2,7 @@ body {
   background: #1D1E21;
   font-family: Ubuntu;
   color: #F9FBFF;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 .section::-webkit-scrollbar-track {
   background-color: transparent; }
@@ -231,16 +231,19 @@ body {
   justify-content: center;
   width: 100vw;
   height: calc(100vh - 30px);
-  position: absolute;
   background: #1D1E21;
   margin: 0 40px 0 0; }
+  .container.content {
+    display: initial;
+    position: relative; }
   .container.light {
     background: #F9FBFF; }
   .container.main {
     top: 0;
-    z-index: 2; }
+    z-index: 2;
+    transition: all 0.5s ease; }
     .container.main.shift {
-      top: 100vh; }
+      top: -100vh; }
   .container#content {
     z-index: 1;
     top: 0; }
@@ -278,16 +281,19 @@ body {
         color: #F9FBFF; }
         .container h2.fire.light:hover {
           background: #F7703D; }
-  .container .section {
+  .container .section-wrapper {
+    margin: 0 auto;
+    padding: calc((20vh + 40px)/2) 0;
     width: 100vw;
-    max-width: 700px;
-    height: calc(80vh - 40px);
+    max-width: 700px; }
+  .container .section {
+    width: 100%;
+    max-height: calc(80vh - 40px);
     padding: 20px 0;
     background: #242528;
     border-radius: 4px;
     position: relative;
-    overflow: scroll;
-    display: none; }
+    overflow: scroll; }
     .container .section.show {
       display: block; }
     .container .section.light {
@@ -297,7 +303,7 @@ body {
     .container .section a:link, .container .section a:active, .container .section a:visited, .container .section a:focus {
       text-decoration: none;
       color: #F9FBFF;
-      background: #FF895C;
+      background: #3C3A3E;
       padding: 8px 10px;
       border-radius: 4px;
       margin-left: 50px;
@@ -306,7 +312,7 @@ body {
       transition: background 0.3s ease-in-out; }
       .container .section a:link:hover, .container .section a:active:hover, .container .section a:visited:hover, .container .section a:focus:hover {
         font-weight: 600;
-        background: #F7703D; }
+        background: #535155; }
     .container .section h1 {
       text-align: left;
       font-weight: 600;
@@ -318,6 +324,8 @@ body {
       text-align: left;
       margin: initial;
       max-width: initial; }
+      .container .section h2.for-screens {
+        margin-top: 40px; }
     .container .section .placeholder {
       width: calc(100% - 100px);
       height: 250px;
@@ -347,5 +355,24 @@ body {
           background: #F9FBFF; }
           .container .section p a.light:hover {
             background: white; }
+    .container .section .screen {
+      width: calc(100% - 100px);
+      padding-top: 30px;
+      padding-bottom: 30px; }
+    .container .section .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 4px;
+      padding: 0 0 30px 0;
+      overflow: hidden; }
+      .container .section .photo img {
+        width: 100%;
+        height: auto; }
+    .container .section .press-item {
+      width: 100%; }
+      .container .section .press-item .link {
+        float: left; }
+      .container .section .press-item .title {
+        float: left; }
 
 /*# sourceMappingURL=common.css.map */

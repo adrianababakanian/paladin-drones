@@ -14,7 +14,7 @@ body {
   background: $background;
   font-family: Ubuntu;
   color: $font;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .section::-webkit-scrollbar-track {
@@ -275,17 +275,22 @@ body {
   justify-content: center;
   width: 100vw;
   height: calc(100vh - 30px);
-  position: absolute;
   background: $background;
   margin: 0 40px 0 0;
+
+  &.content {
+    display: initial;
+    position: relative;
+  }
 
   &.light { background: $font }
 
   &.main {
     top: 0;
     z-index: 2;
+    transition: all 0.5s ease;
     &.shift {
-      top: 100vh;
+      top: -100vh;
     }
   }
 
@@ -339,16 +344,22 @@ body {
     }
   }
 
+  .section-wrapper {
+    margin: 0 auto;
+    padding: calc((20vh + 40px)/2) 0;
+    width: 100vw;
+    max-width: 700px;
+  }
+
   .section {
-   width: 100vw;
-   max-width: 700px;
-   height: calc(80vh - 40px);
+   width: 100%;
+   max-height: calc(80vh - 40px);
    padding: 20px 0;
    background: $section;
    border-radius: 4px;
    position: relative;
    overflow: scroll;
-   display: none;
+
 
    &.show { display: block; }
    &.light { background: $hi; }
@@ -358,7 +369,7 @@ body {
      &:link, &:active, &:visited, &:focus {
        text-decoration: none;
        color: $font;
-       background: $fire;
+       background: $em;
        padding: 8px 10px;
        border-radius: 4px;
        margin-left: 50px;
@@ -367,7 +378,7 @@ body {
        transition: background 0.3s ease-in-out;
        &:hover {
          font-weight: 600;
-         background: $dark_fire;
+         background: $em_hov;
        }
      }
    }
@@ -385,6 +396,9 @@ body {
      text-align: left;
      margin: initial;
      max-width: initial;
+     &.for-screens {
+       margin-top: 40px;
+     }
    }
 
    .placeholder {
@@ -424,6 +438,36 @@ body {
        }
      }
    }
+
+   .screen {
+     width: calc(100% - 100px);
+     padding-top: 30px;
+     padding-bottom: 30px;
+   }
+
+   .photo {
+     width: 200px;
+     height: 200px;
+     border-radius: 4px;
+     padding: 0 0 30px 0;
+     overflow: hidden;
+     img {
+       width: 100%;
+       height: auto;
+     }
+   }
+
+   .press-item {
+     width: 100%;
+     .link {
+       float: left;
+     }
+     .title {
+       float: left;
+     }
+   }
+
+
   }
 
 }
