@@ -34,22 +34,40 @@ a {
   }
 }
 
-// .body::-webkit-scrollbar-track {
-//   background-color: transparent;
-// }
-//
-// .body {
-//   &::-webkit-scrollbar { background: none }
-//   &::-webkit-scrollbar-corner { background: none }
-//   &::-webkit-scrollbar-track { background: none }
-//   &::-webkit-scrollbar-thumb {
-//     border-radius: 2px;
-//     background-color: $em;
-//   }
-//   &.light {
-//     &::-webkit-scrollbar-thumb { background-color: $hi_dark; }
-//   }
-// }
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.column::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+body {
+  &::-webkit-scrollbar { background: none }
+  &::-webkit-scrollbar-corner { background: none }
+  &::-webkit-scrollbar-track { background: none }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $em;
+  }
+  &.light {
+    &::-webkit-scrollbar-thumb { background-color: $hi_dark; }
+  }
+}
+
+.column {
+  &::-webkit-scrollbar { background: none }
+  &::-webkit-scrollbar-corner { background: none }
+  &::-webkit-scrollbar-track { background: none }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $em;
+  }
+  &.light {
+    &::-webkit-scrollbar-thumb { background-color: $hi_dark; }
+  }
+}
 
 
 
@@ -60,6 +78,7 @@ a {
     padding-right: 5px;
   }
   &.light { color: $hi_dark }
+  &.expand { font-size: 40px }
 }
 
 #nav-icon3 {
@@ -358,6 +377,19 @@ a {
         &:hover {
           background: $dark_fire;
         }
+        .drone {
+          svg g#drone { fill: white;}
+
+        }
+      }
+      .drone {
+        width: 25px;
+        padding: 0 5px;
+        transform: rotate(45deg);
+        svg {
+          fill: $fire !important;
+        }
+
       }
     }
   }

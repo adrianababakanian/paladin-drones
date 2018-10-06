@@ -15,6 +15,36 @@ a:link, a:active, a:visited, a:focus {
   a:link:hover, a:active:hover, a:visited:hover, a:focus:hover {
     font-weight: 600; }
 
+body::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.column::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+body::-webkit-scrollbar {
+  background: none; }
+body::-webkit-scrollbar-corner {
+  background: none; }
+body::-webkit-scrollbar-track {
+  background: none; }
+body::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #3C3A3E; }
+body.light::-webkit-scrollbar-thumb {
+  background-color: #F3F6FB; }
+
+.column::-webkit-scrollbar {
+  background: none; }
+.column::-webkit-scrollbar-corner {
+  background: none; }
+.column::-webkit-scrollbar-track {
+  background: none; }
+.column::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #3C3A3E; }
+.column.light::-webkit-scrollbar-thumb {
+  background-color: #F3F6FB; }
+
 .gray {
   color: #3C3A3E;
   cursor: pointer;
@@ -23,6 +53,8 @@ a:link, a:active, a:visited, a:focus {
     padding-right: 5px; }
   .gray.light {
     color: #F3F6FB; }
+  .gray.expand {
+    font-size: 40px; }
 
 #nav-icon3 {
   width: 27px;
@@ -279,6 +311,14 @@ a:link, a:active, a:visited, a:focus {
         color: #F9FBFF; }
         .container h2.fire.light:hover {
           background: #F7703D; }
+        .container h2.fire.light .drone svg g#drone {
+          fill: white; }
+      .container h2.fire .drone {
+        width: 25px;
+        padding: 0 5px;
+        transform: rotate(45deg); }
+        .container h2.fire .drone svg {
+          fill: #FF895C !important; }
   .container .section-wrapper {
     margin: 0 auto;
     padding: 80px 0;
