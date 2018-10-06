@@ -1,7 +1,33 @@
 body {
   background: #1D1E21;
   font-family: Ubuntu;
-  color: #F9FBFF; }
+  color: #F9FBFF;
+  transition: background 0.2s ease-in-out;
+  overflow: hidden; }
+
+.section::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.section::-webkit-scrollbar {
+  background: none; }
+.section::-webkit-scrollbar-corner {
+  background: none; }
+.section::-webkit-scrollbar-track {
+  background: none; }
+.section::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #3C3A3E; }
+.section.light::-webkit-scrollbar-thumb {
+  background-color: #EBECEF; }
+
+.gray {
+  color: #3C3A3E;
+  cursor: pointer;
+  padding: 10px; }
+  .gray.left {
+    padding-right: 5px; }
+  .gray.light {
+    color: #EBECEF; }
 
 #nav-icon3 {
   width: 27px;
@@ -158,7 +184,8 @@ body {
   position: fixed;
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  z-index: 3; }
   .header-wrap .logo-font {
     margin: 0;
     font-family: Ubuntu;
@@ -202,9 +229,22 @@ body {
 .container {
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .container#main {
-    height: calc(100vh - 30px); }
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 30px);
+  position: absolute;
+  background: #1D1E21;
+  margin: 0 40px 0 0; }
+  .container.light {
+    background: #F9FBFF; }
+  .container.main {
+    top: 0;
+    z-index: 2; }
+    .container.main.shift {
+      top: 100vh; }
+  .container#content {
+    z-index: 1;
+    top: 0; }
   .container .main {
     width: 700px;
     height: 500px;
@@ -245,7 +285,12 @@ body {
     height: calc(80vh - 40px);
     padding: 20px 0;
     background: #242528;
-    border-radius: 4px; }
+    border-radius: 4px;
+    position: relative;
+    overflow: scroll;
+    display: none; }
+    .container .section.show {
+      display: block; }
     .container .section.light {
       background: #F5F7FB; }
     .container .section > * {
@@ -255,6 +300,21 @@ body {
       font-weight: 600;
       font-size: 36px;
       margin: 30px 0; }
+    .container .section h2 {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: left;
+      margin: initial;
+      max-width: initial; }
+    .container .section .placeholder {
+      width: calc(100% - 100px);
+      height: 250px;
+      background: #1D1E21;
+      margin: 20px 50px;
+      padding: 0;
+      border-radius: 4px; }
+      .container .section .placeholder.light {
+        background: #EBECEF; }
     .container .section p {
       font-size: 16px;
       line-height: 36px;
@@ -263,7 +323,7 @@ body {
       width: calc(100% - 120px); }
       .container .section p a {
         background: #3C3A3E;
-        padding: 6px 8px;
+        padding: 8px 10px;
         border-radius: 4px;
         cursor: pointer;
         font-weight: 400;
@@ -271,5 +331,9 @@ body {
         .container .section p a:hover {
           font-weight: 600;
           background: #535155; }
+        .container .section p a.light {
+          background: #F9FBFF; }
+          .container .section p a.light:hover {
+            background: white; }
 
 /*# sourceMappingURL=common.css.map */

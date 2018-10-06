@@ -1,6 +1,7 @@
 $background: #1D1E21;
 $section: #242528;
 $hi: #F5F7FB;
+$hi_dark: #EBECEF;
 $em: #3C3A3E;
 $em_hov: #535155;
 $font: #F9FBFF;
@@ -13,6 +14,34 @@ body {
   background: $background;
   font-family: Ubuntu;
   color: $font;
+  overflow: hidden;
+}
+
+.section::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.section {
+  &::-webkit-scrollbar { background: none }
+  &::-webkit-scrollbar-corner { background: none }
+  &::-webkit-scrollbar-track { background: none }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $em;
+  }
+  &.light {
+    &::-webkit-scrollbar-thumb { background-color: $hi_dark; }
+  }
+}
+
+
+
+.gray {
+  color: $em; cursor: pointer; padding: 10px;
+  &.left {
+    padding-right: 5px;
+  }
+  &.light { color: $hi_dark }
 }
 
 #nav-icon3 {
@@ -188,6 +217,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 3;
   .logo-font {
     margin: 0;
     font-family: Ubuntu;
@@ -243,10 +273,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  // height: calc(100vh - 30px);
+  width: 100vw;
+  height: calc(100vh - 30px);
+  position: absolute;
+  background: $background;
+  margin: 0 40px 0 0;
 
-  &#main {
-    height: calc(100vh - 30px);
+  &.light { background: $font }
+
+  &.main {
+    top: 0;
+    z-index: 2;
+    &.shift {
+      top: 100vh;
+    }
+  }
+
+  &#content {
+    z-index: 1;
+    top: 0;
   }
 
   .main {
@@ -301,6 +346,13 @@ body {
    padding: 20px 0;
    background: $section;
    border-radius: 4px;
+   position: relative;
+   overflow: scroll;
+   display: none;
+
+   &.show {
+     display: block;
+   }
 
    &.light {
      background: $hi;
@@ -313,9 +365,28 @@ body {
    h1 {
      text-align: left;
      font-weight: 600;
-
      font-size: 36px;
      margin: 30px 0;
+   }
+
+   h2 {
+     font-size: 24px;
+     font-weight: 400;
+     text-align: left;
+     margin: initial;
+     max-width: initial;
+   }
+
+   .placeholder {
+     width: calc(100% - 100px);
+     height: 250px;
+     background: $background;
+     margin: 20px 50px;
+     padding: 0;
+     border-radius: 4px;
+     &.light {
+       background: $hi_dark;
+     }
    }
 
    p {
@@ -326,7 +397,7 @@ body {
      width: calc(100% - 120px);
      a {
        background: $em;
-       padding: 6px 8px;
+       padding: 8px 10px;
        border-radius: 4px;
        cursor: pointer;
        font-weight: 400;
@@ -334,6 +405,12 @@ body {
        &:hover {
          font-weight: 600;
          background: $em_hov;
+       }
+       &.light {
+         background: $font;
+         &:hover {
+           background: white;
+         }
        }
      }
    }
