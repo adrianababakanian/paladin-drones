@@ -19,20 +19,20 @@
   <body>
 
     <div class="header-wrap">
-      <div class="logo-font">Paladin</div>
-      <h4 onclick="openNav()" id="menu">Menu</h4>
-      <div id="nav-icon3" >
+      <h3 class="logo-font" onClick="toggleLights()">Paladin</h3>
+      <h4 onclick="toggleNav()" id="menu">Menu</h4>
+      <div id="nav-icon3" onClick="toggleNav()">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
       </div>
       <div class="nav-content sidenav" id="mySidenav">
-        <a href="#mission" class="nav-item">Mission</a>
-        <div class="nav-item">Software</div>
-        <div class="nav-item">Team</div>
-        <div class="nav-item">Contact</div>
-        <div class="nav-item">Press</div>
+        <a href="#mission" class="nav-item" onClick="toggleNav()">Mission</a>
+        <a href="#software" class="nav-item" onClick="toggleNav()">Software</a>
+        <a href="#team" class="nav-item" onClick="toggleNav()">Team</a>
+        <a href="#contac" class="nav-item" onClick="toggleNav()">Contact</a>
+        <a href="#press" class="nav-item" onClick="toggleNav()">Press</a>
       </div>
     </div>
 

@@ -23,6 +23,12 @@ body {
   margin: 13px 10px;
   z-index: 1000; }
 
+.back {
+  color: #1D1E21; }
+
+.light {
+  background: #F9FBFF; }
+
 #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
   display: block;
   position: absolute;
@@ -40,6 +46,8 @@ body {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out; }
+  #nav-icon1 span.back, #nav-icon3 span.back, #nav-icon4 span.back {
+    background: #1D1E21; }
 
 #nav-icon3 span:nth-child(1) {
   top: 0px; }
@@ -54,23 +62,31 @@ body {
   top: 9px;
   width: 0%;
   left: 50%; }
+  #nav-icon3.open span:nth-child(1).light {
+    background: #F9FBFF; }
 
 #nav-icon3.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg); }
+  #nav-icon3.open span:nth-child(2).light {
+    background: #F9FBFF; }
 
 #nav-icon3.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+  #nav-icon3.open span:nth-child(3).light {
+    background: #F9FBFF; }
 
 #nav-icon3.open span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%; }
+  #nav-icon3.open span:nth-child(4).light {
+    background: #F9FBFF; }
 
 .sidenav {
   height: 40px;
@@ -91,6 +107,8 @@ body {
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
   padding-top: 10px; }
+  .sidenav.light {
+    background: #F9FBFF; }
 
 /* The navigation menu links */
 .sidenav a {
@@ -98,6 +116,9 @@ body {
   .sidenav a:link, .sidenav a:hover, .sidenav a:visited, .sidenav a:focus {
     color: #F9FBFF;
     text-decoration: none; }
+    .sidenav a:link.light, .sidenav a:hover.light, .sidenav a:visited.light, .sidenav a:focus.light {
+      color: #1D1E21;
+      background: #F9FBFF; }
   .sidenav a.nav-item {
     padding: 10px;
     font-weight: 400;
@@ -139,8 +160,8 @@ body {
   justify-content: flex-end;
   align-items: center; }
   .header-wrap .logo-font {
+    margin: 0;
     font-family: Ubuntu;
-    color: #F9FBFF;
     font-weight: 800;
     font-size: 20px;
     cursor: pointer;
@@ -148,6 +169,8 @@ body {
     position: absolute;
     left: 0;
     padding: 10px; }
+    .header-wrap .logo-font.back {
+      color: #1D1E21; }
   .header-wrap #menu {
     opacity: 1;
     transition: opacity 0.8s ease-in-out; }
@@ -211,6 +234,11 @@ body {
       cursor: pointer; }
       .container h2.fire:hover {
         background: #3C3A3E; }
+      .container h2.fire.light {
+        background: #FF895C;
+        color: #F9FBFF; }
+        .container h2.fire.light:hover {
+          background: #F7703D; }
   .container .section {
     width: 100vw;
     max-width: 700px;
@@ -218,6 +246,8 @@ body {
     padding: 20px 0;
     background: #242528;
     border-radius: 4px; }
+    .container .section.light {
+      background: #F5F7FB; }
     .container .section > * {
       padding-left: 50px; }
     .container .section h1 {
