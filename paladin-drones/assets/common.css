@@ -395,6 +395,7 @@ a:link, a:active, a:visited, a:focus {
             padding: 10px; } }
         @media (max-width: 900px) {
           .container .section .team .member-wrapper {
+            margin-left: 10px;
             width: calc(100% - 40px);
             padding: 20px; } }
         .container .section .team .member-wrapper:hover p {
@@ -424,6 +425,9 @@ a:link, a:active, a:visited, a:focus {
             @media (max-width: 1200px) {
               .container .section .team .member-wrapper .member p {
                 padding: 0 20px; } }
+          @media (max-width: 1200px) {
+            .container .section .team .member-wrapper .member {
+              width: calc(100%); } }
     .container .section .screen {
       width: 100%;
       padding-top: 30px;

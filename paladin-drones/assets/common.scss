@@ -505,6 +505,8 @@ a {
          padding: 10px;
        }
        @media (max-width: 900px) {
+         margin-left: 10px;
+
          width: calc(100% - 40px);
          padding: 20px;
        }
@@ -542,6 +544,11 @@ a {
            @media (max-width: 1200px) {
              padding: 0 20px;
            }
+         }
+
+         @media (max-width: 1200px) {
+           width: calc(100%);
+
          }
 
        }
