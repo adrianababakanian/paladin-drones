@@ -66,7 +66,7 @@ function toggleNav() {
  function toggleLights() {
    $('h1, h2, h3, h4, p, .logo-font, #nav-icon3 span').toggleClass('back');
 
-   $('.section, body, .container, .fire, .sidenav, .sidenav a, p a, .section::-webkit-scrollbar-thumb, .placeholder, .gray').toggleClass('light');
+   $('.section, body, .container, .fire, .sidenav, .sidenav a, p a, .section::-webkit-scrollbar-thumb, .placeholder, .gray, .member').toggleClass('light');
  }
 
  function testing() {

@@ -3,20 +3,22 @@ body {
   font-family: Ubuntu;
   color: #F9FBFF;
   overflow-x: hidden; }
+  body.light {
+    background: #F9FBFF; }
 
-.section::-webkit-scrollbar-track {
+.body::-webkit-scrollbar-track {
   background-color: transparent; }
 
-.section::-webkit-scrollbar {
+.body::-webkit-scrollbar {
   background: none; }
-.section::-webkit-scrollbar-corner {
+.body::-webkit-scrollbar-corner {
   background: none; }
-.section::-webkit-scrollbar-track {
+.body::-webkit-scrollbar-track {
   background: none; }
-.section::-webkit-scrollbar-thumb {
+.body::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background-color: #3C3A3E; }
-.section.light::-webkit-scrollbar-thumb {
+.body.light::-webkit-scrollbar-thumb {
   background-color: #EBECEF; }
 
 .gray {
@@ -50,9 +52,6 @@ body {
 
 .back {
   color: #1D1E21; }
-
-.light {
-  background: #F9FBFF; }
 
 #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
   display: block;
@@ -287,7 +286,6 @@ body {
     width: 100vw;
     max-width: 900px; }
   .container .section {
-    width: calc(100% - 100px);
     padding: 20px 0;
     border-radius: 4px;
     position: relative; }
@@ -350,6 +348,25 @@ body {
           background: #F9FBFF; }
           .container .section p a.light:hover {
             background: white; }
+    .container .section #team {
+      max-width: 1000px; }
+    .container .section .team {
+      height: auto;
+      overflow: auto;
+      margin-left: -20px; }
+      .container .section .team .member {
+        max-height: 580px;
+        border-radius: 4px;
+        overflow: scroll;
+        background: #242528;
+        width: calc(50% - 80px);
+        float: left;
+        margin: 20px;
+        padding: 20px; }
+        .container .section .team .member p {
+          width: 100%; }
+        .container .section .team .member.light {
+          background: #F5F7FB; }
     .container .section .screen {
       width: 100%;
       padding-top: 30px;

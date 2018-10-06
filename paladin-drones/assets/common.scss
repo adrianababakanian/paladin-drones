@@ -15,13 +15,16 @@ body {
   font-family: Ubuntu;
   color: $font;
   overflow-x: hidden;
+  &.light {
+    background: $font;
+  }
 }
 
-.section::-webkit-scrollbar-track {
+.body::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-.section {
+.body {
   &::-webkit-scrollbar { background: none }
   &::-webkit-scrollbar-corner { background: none }
   &::-webkit-scrollbar-track { background: none }
@@ -67,10 +70,6 @@ body {
 
 .back {
   color: $background;
-}
-
-.light {
-  background: $font;
 }
 
 #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
@@ -353,7 +352,7 @@ body {
   }
 
   .section {
-   width: calc(100% - 100px);
+  // width: calc(100% - 100px);
    //max-height: calc(80vh - 40px);
    padding: 20px 0;
    // background: $section;
@@ -435,6 +434,32 @@ body {
          &:hover {
            background: white;
          }
+       }
+     }
+   }
+
+   #team {
+     max-width: 1000px;
+   }
+
+   .team {
+     height: auto;
+     overflow: auto;
+     margin-left: -20px;
+     .member {
+       max-height: 580px;
+       border-radius: 4px;
+       overflow: scroll;
+       background: $section;
+       width: calc(50% - 80px);
+       float: left;
+       margin: 20px;
+       padding: 20px;
+       p {
+         width: 100%;
+       }
+       &.light {
+         background: $hi;
        }
      }
    }
