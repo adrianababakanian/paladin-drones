@@ -22,6 +22,18 @@ body {
   }
 }
 
+a {
+  &:link, &:active, &:visited, &:focus {
+    text-decoration: none;
+    color: $font;
+    cursor: pointer;
+    font-weight: 400;
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
 // .body::-webkit-scrollbar-track {
 //   background-color: transparent;
 // }
@@ -439,13 +451,15 @@ body {
          background: $em_hov;
        }
       }
+      @media (max-width: 900px) {
+        width: calc(100% - 40px);
+      }
    }
 
    .row {
      width: calc(100% + 60px);
      overflow: auto;
      margin-left: -100px;
-
      .column {
        max-height: 580px;
        border-radius: 4px;
@@ -460,6 +474,18 @@ body {
        }
        &.light {
          background: $hi_dark;
+       }
+     }
+     @media (max-width: 1300px) {
+       width: calc(100% - 40px);
+       margin-left: -20px;
+     }
+     @media (max-width: 700px) {
+       width: calc(100%);
+       margin-left: -20px;
+       .column {
+         width: calc(100% - 60px);
+         margin: 0;
        }
      }
    }
@@ -523,6 +549,20 @@ body {
      img {
        width: 100%;
        height: auto;
+     }
+   }
+
+   .elsewhere {
+     width: 100%;
+     overflow: auto;
+     margin-left: -10px;
+     .else {
+       display: inline-block;
+       float: left;
+       height: 20px;
+       width: 20px;
+       float: left;
+       margin: 10px;
      }
    }
 
