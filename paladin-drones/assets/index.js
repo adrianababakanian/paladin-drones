@@ -1,9 +1,41 @@
 $(document).ready(function(){
-  $sections = ['#mission', '#software', '#team', '#contact', '#press'];
+  // $section = ($(this).attr("href"));
+  // $($section).toggleClass('show');
   $("#m_link").click(function(){
-       $section = ($(this).attr("href"));
-       $($section).toggleClass('show');
+       $('#mission').addClass('show');
+       $('#software').removeClass('show');
+       $('#team').removeClass('show');
+       $('#contact').removeClass('show');
+       $('#press').removeClass('show');
    });
+   $("#s_link").click(function(){
+     $('#software').addClass('show');
+     $('#mission').removeClass('show');
+     $('#team').removeClass('show');
+     $('#contact').removeClass('show');
+     $('#press').removeClass('show');
+    });
+    $("#t_link").click(function(){
+      $('#team').addClass('show');
+      $('#mission').removeClass('show');
+      $('#software').removeClass('show');
+      $('#contact').removeClass('show');
+      $('#press').removeClass('show');
+     });
+   $("#c_link").click(function(){
+     $('#contact').addClass('show');
+     $('#mission').removeClass('show');
+     $('#software').removeClass('show');
+     $('#team').removeClass('show');
+     $('#press').removeClass('show');
+    });
+    $("#p_link").click(function(){
+      $('#press').addClass('show');
+      $('#mission').removeClass('show');
+      $('#software').removeClass('show');
+      $('#team').removeClass('show');
+      $('#contact').removeClass('show');
+     });
 });
 
 var lastScrollTop = 0;

@@ -350,16 +350,26 @@ body {
    overflow: scroll;
    display: none;
 
-   &.show {
-     display: block;
-   }
+   &.show { display: block; }
+   &.light { background: $hi; }
+   > * { padding-left: 50px; }
 
-   &.light {
-     background: $hi;
-   }
-
-   > * {
-     padding-left: 50px;
+   a {
+     &:link, &:active, &:visited, &:focus {
+       text-decoration: none;
+       color: $font;
+       background: $fire;
+       padding: 8px 10px;
+       border-radius: 4px;
+       margin-left: 50px;
+       cursor: pointer;
+       font-weight: 400;
+       transition: background 0.3s ease-in-out;
+       &:hover {
+         font-weight: 600;
+         background: $dark_fire;
+       }
+     }
    }
 
    h1 {

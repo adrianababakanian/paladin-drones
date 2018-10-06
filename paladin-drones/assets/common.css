@@ -2,7 +2,6 @@ body {
   background: #1D1E21;
   font-family: Ubuntu;
   color: #F9FBFF;
-  transition: background 0.2s ease-in-out;
   overflow: hidden; }
 
 .section::-webkit-scrollbar-track {
@@ -295,6 +294,19 @@ body {
       background: #F5F7FB; }
     .container .section > * {
       padding-left: 50px; }
+    .container .section a:link, .container .section a:active, .container .section a:visited, .container .section a:focus {
+      text-decoration: none;
+      color: #F9FBFF;
+      background: #FF895C;
+      padding: 8px 10px;
+      border-radius: 4px;
+      margin-left: 50px;
+      cursor: pointer;
+      font-weight: 400;
+      transition: background 0.3s ease-in-out; }
+      .container .section a:link:hover, .container .section a:active:hover, .container .section a:visited:hover, .container .section a:focus:hover {
+        font-weight: 600;
+        background: #F7703D; }
     .container .section h1 {
       text-align: left;
       font-weight: 600;
