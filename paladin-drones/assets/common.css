@@ -45,6 +45,20 @@ body.light::-webkit-scrollbar-thumb {
 .column.light::-webkit-scrollbar-thumb {
   background-color: #F3F6FB; }
 
+.nav-content::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+.nav-content::-webkit-scrollbar {
+  background: none; }
+.nav-content::-webkit-scrollbar-corner {
+  background: none; }
+.nav-content::-webkit-scrollbar-track {
+  background: none; }
+.nav-content::-webkit-scrollbar-thumb {
+  background: none; }
+.nav-content.light::-webkit-scrollbar-thumb {
+  background: none; }
+
 .gray {
   color: #3C3A3E;
   cursor: pointer;
@@ -375,18 +389,39 @@ body.light::-webkit-scrollbar-thumb {
       font-family: Ubuntu;
       font-weight: 300;
       width: calc(100% - 120px); }
-      .container .section p a {
-        text-decoration: none;
-        color: #F9FBFF;
-        background: #3C3A3E;
-        padding: 8px 10px;
+      .container .section p .fire {
+        margin: 0;
+        display: inline-block;
+        max-width: 200px;
+        font-size: 16px;
+        color: #FF895C;
+        transition: background 0.3s ease-in-out;
+        padding: 15px 20px;
+        background: #242528;
         border-radius: 4px;
         cursor: pointer;
-        font-weight: 400;
-        transition: background 0.3s ease-in-out; }
-        .container .section p a:hover {
-          font-weight: 600;
-          background: #535155; }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300; }
+        .container .section p .fire .material-icons {
+          padding-right: 10px; }
+        .container .section p .fire:hover {
+          background: #3C3A3E;
+          font-weight: 300; }
+        .container .section p .fire.light {
+          background: #FF895C;
+          color: #F9FBFF; }
+          .container .section p .fire.light:hover {
+            background: #F7703D; }
+          .container .section p .fire.light .drone svg g#drone {
+            fill: white; }
+        .container .section p .fire .drone {
+          width: 25px;
+          padding: 0 5px;
+          transform: rotate(45deg); }
+          .container .section p .fire .drone svg {
+            fill: #FF895C !important; }
       @media (max-width: 900px) {
         .container .section p {
           width: calc(100% - 40px); } }
