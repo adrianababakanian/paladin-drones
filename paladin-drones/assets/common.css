@@ -7,21 +7,6 @@ body {
   body.light {
     background: #F9FBFF; }
 
-.body::-webkit-scrollbar-track {
-  background-color: transparent; }
-
-.body::-webkit-scrollbar {
-  background: none; }
-.body::-webkit-scrollbar-corner {
-  background: none; }
-.body::-webkit-scrollbar-track {
-  background: none; }
-.body::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  background-color: #3C3A3E; }
-.body.light::-webkit-scrollbar-thumb {
-  background-color: #F3F6FB; }
-
 .gray {
   color: #3C3A3E;
   cursor: pointer;
@@ -48,7 +33,7 @@ body {
   align-self: flex-end;
   top: 0;
   right: 0;
-  margin: 10px;
+  margin: 10px 20px;
   z-index: 1000; }
 
 .back {
@@ -198,7 +183,7 @@ body {
     display: inline-block;
     position: absolute;
     left: 0;
-    padding: 10px; }
+    padding: 20px; }
     .header-wrap .logo-font.back {
       color: #1D1E21; }
   .header-wrap #menu {
@@ -211,10 +196,6 @@ body {
     align-self: center;
     font-weight: 300;
     font-size: 16px;
-    cursor: pointer; }
-  .header-wrap .hamburger {
-    padding: 10px 10px 10px 5px;
-    font-size: 30px;
     cursor: pointer; }
   .header-wrap a {
     display: inline-block; }
@@ -277,7 +258,12 @@ body {
       background: #242528;
       border-radius: 4px;
       margin: 140px auto 0 auto;
-      cursor: pointer; }
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .container h2.fire .material-icons {
+        padding-right: 10px; }
       .container h2.fire:hover {
         background: #3C3A3E; }
       .container h2.fire.light {
@@ -288,12 +274,9 @@ body {
   .container .section-wrapper {
     margin: 0 auto;
     padding: 80px 0;
-    width: 100vw;
-    max-width: 1000px; }
-    .container .section-wrapper#software {
-      max-width: 1000px; }
-    .container .section-wrapper#team {
-      max-width: 1000px; }
+    max-width: 1100px; }
+    .container .section-wrapper#contact {
+      margin-bottom: 200px; }
   .container .section {
     padding: 20px 0;
     border-radius: 4px;
@@ -302,6 +285,9 @@ body {
       display: block; }
     .container .section > * {
       padding-left: 50px; }
+      @media (max-width: 900px) {
+        .container .section > * {
+          padding-left: 20px; } }
     .container .section a:link, .container .section a:active, .container .section a:visited, .container .section a:focus {
       text-decoration: none;
       color: #F9FBFF;
@@ -326,8 +312,6 @@ body {
       text-align: left;
       margin: initial;
       max-width: initial; }
-      .container .section h2.for-screens {
-        margin-top: 40px; }
     .container .section .placeholder {
       width: calc(100% - 100px);
       height: 250px;
@@ -356,9 +340,9 @@ body {
           font-weight: 600;
           background: #535155; }
     .container .section .row {
-      width: 100%;
+      width: calc(100% + 60px);
       overflow: auto;
-      margin-left: -20px; }
+      margin-left: -100px; }
       .container .section .row .column {
         max-height: 580px;
         border-radius: 4px;
@@ -367,13 +351,11 @@ body {
         width: calc(50% - 80px);
         float: left;
         margin: 10px;
-        padding: 0 30px; }
+        padding: 30px; }
         .container .section .row .column p {
           width: 100%; }
         .container .section .row .column.light {
           background: #F3F6FB; }
-    .container .section #team {
-      max-width: 1000px; }
     .container .section .team {
       height: auto;
       overflow: auto;
