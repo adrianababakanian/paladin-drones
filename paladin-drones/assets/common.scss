@@ -49,11 +49,26 @@ body {
   }
 }
 
-.vid {
+video {
+  height: 100vh;
+  width: auto;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+.shade {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 1000;
+  top: 0;
+  z-index: -1;
+  background: #1D1E21F2;
+  &.light {
+    background: #F9FBFFF2;
+  }
 }
 
 a {
@@ -388,25 +403,23 @@ body {
   justify-content: center;
   width: 100vw;
   height: calc(100vh - 30px);
-  background: $background;
   margin: 0 40px 0 0;
   @media(max-width: 700px) {
+    background: $background;
     position: absolute;
     left: 0;
     &.content {
       top: 100vh;
     }
     .intro { margin-top: 80px; position: relative;}
-    h1 { max-width: 200px; width: 100%; margin: 0 auto;
-    }
+    h1 { max-width: 200px; width: 100%; margin: 0 auto;}
+    &.light { background: $font }
   }
 
   &.content {
     display: initial;
     position: relative;
   }
-
-  &.light { background: $font }
 
   &.main {
     top: 0;
