@@ -87,7 +87,7 @@ body {
   &.left {
     padding-right: 5px;
   }
-  &.light { color: $hi_dark }
+  &.light { color: $background }
   &.expand { font-size: 40px }
 }
 
@@ -399,6 +399,18 @@ body {
         svg {
           fill: $fire !important;
         }
+        &#drone_dark {
+          display: inline-block;
+          &.light {
+            display: none;
+          }
+        }
+        &#drone_light {
+          display: none;
+          &.light {
+            display: inline-block;
+          }
+        }
 
       }
     }
@@ -501,7 +513,7 @@ body {
        font-size: 16px;
        color: $fire;
        transition: background 0.3s ease-in-out;
-       padding: 15px 20px;
+       padding: 9px 20px;
        background: $section;
        border-radius: 4px;
        cursor: pointer;

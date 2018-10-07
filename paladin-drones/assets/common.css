@@ -66,7 +66,7 @@ body.light::-webkit-scrollbar-thumb {
   .gray.left {
     padding-right: 5px; }
   .gray.light {
-    color: #F3F6FB; }
+    color: #1D1E21; }
   .gray.expand {
     font-size: 40px; }
 
@@ -333,6 +333,14 @@ body.light::-webkit-scrollbar-thumb {
         transform: rotate(45deg); }
         .container h2.fire .drone svg {
           fill: #FF895C !important; }
+        .container h2.fire .drone#drone_dark {
+          display: inline-block; }
+          .container h2.fire .drone#drone_dark.light {
+            display: none; }
+        .container h2.fire .drone#drone_light {
+          display: none; }
+          .container h2.fire .drone#drone_light.light {
+            display: inline-block; }
   .container .section-wrapper {
     margin: 0 auto;
     padding: 80px 0;
@@ -396,7 +404,7 @@ body.light::-webkit-scrollbar-thumb {
         font-size: 16px;
         color: #FF895C;
         transition: background 0.3s ease-in-out;
-        padding: 15px 20px;
+        padding: 9px 20px;
         background: #242528;
         border-radius: 4px;
         cursor: pointer;
