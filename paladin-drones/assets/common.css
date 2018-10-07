@@ -31,6 +31,12 @@ body {
   body.light {
     background: #F9FBFF; }
 
+.vid {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000; }
+
 a:link, a:active, a:visited, a:focus {
   text-decoration: none;
   color: #F9FBFF;
@@ -265,6 +271,17 @@ body.light::-webkit-scrollbar-thumb {
     padding: 20px; }
     .header-wrap .logo-font.back {
       color: #1D1E21; }
+    .header-wrap .logo-font img {
+      height: 30px;
+      transform: translateY(7px);
+      padding-right: 5px;
+      margin: 0; }
+      .header-wrap .logo-font img.light {
+        display: none; }
+      .header-wrap .logo-font img.dark {
+        display: none; }
+        .header-wrap .logo-font img.dark.light {
+          display: inline-block; }
   .header-wrap #menu {
     opacity: 1;
     transition: opacity 0.8s ease-in-out; }
@@ -348,7 +365,8 @@ body.light::-webkit-scrollbar-thumb {
     max-width: 240px;
     margin: 20px auto;
     text-align: center; }
-    .container h2.fire a {
+    .container h2 a.fire {
+      font-weight: 300;
       font-size: 16px;
       max-width: 180px;
       color: #FF895C;
@@ -360,35 +378,37 @@ body.light::-webkit-scrollbar-thumb {
       display: flex;
       align-items: center;
       justify-content: center; }
-      .container h2.fire a .material-icons {
+      .container h2 a.fire .material-icons {
         padding-right: 10px; }
-      .container h2.fire a:hover {
+      .container h2 a.fire:hover {
         background: #3C3A3E; }
-      .container h2.fire a.light {
+      .container h2 a.fire.light {
         background: #FF895C;
         color: #F9FBFF; }
-        .container h2.fire a.light:hover {
+        .container h2 a.fire.light:hover {
           background: #F7703D; }
-        .container h2.fire a.light .drone svg g#drone {
+        .container h2 a.fire.light .drone svg g#drone {
           fill: white; }
-      .container h2.fire a .drone {
+      .container h2 a.fire .drone {
         width: 25px;
         padding: 0 5px;
         transform: rotate(45deg); }
-        .container h2.fire a .drone svg {
+        .container h2 a.fire .drone svg {
           fill: #FF895C !important; }
-        .container h2.fire a .drone#drone_dark {
+        .container h2 a.fire .drone#drone_dark {
           display: inline-block; }
-          .container h2.fire a .drone#drone_dark.light {
+          .container h2 a.fire .drone#drone_dark.light {
             display: none; }
-        .container h2.fire a .drone#drone_light {
+        .container h2 a.fire .drone#drone_light {
           display: none; }
-          .container h2.fire a .drone#drone_light.light {
+          .container h2 a.fire .drone#drone_light.light {
             display: inline-block; }
   .container .section-wrapper {
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 40px 0;
     max-width: 1100px; }
+    .container .section-wrapper#mission {
+      padding-top: 180px; }
     .container .section-wrapper#contact {
       margin-bottom: 100px; }
   .container .section {
