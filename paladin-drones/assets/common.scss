@@ -353,12 +353,17 @@ body {
   height: calc(100vh - 30px);
   background: $background;
   margin: 0 40px 0 0;
-  position: absolute;
-  left: 0;
+  // position: absolute;
+  // left: 0;
+  @media(max-width: 700px) {
+    position: absolute;
+    left: 0;
+  }
 
   &.content {
     display: initial;
     position: relative;
+    top: 100vh;
   }
 
   &.light { background: $font }
