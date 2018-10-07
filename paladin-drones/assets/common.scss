@@ -353,17 +353,20 @@ body {
   height: calc(100vh - 30px);
   background: $background;
   margin: 0 40px 0 0;
-  // position: absolute;
-  // left: 0;
   @media(max-width: 700px) {
     position: absolute;
     left: 0;
+    &.content {
+      top: 100vh;
+    }
+    .intro { margin-top: 80px; position: relative;}
+    h1 { max-width: 200px; width: 100%; margin: 0 auto;
+    }
   }
 
   &.content {
     display: initial;
     position: relative;
-    top: 100vh;
   }
 
   &.light { background: $font }
@@ -376,16 +379,10 @@ body {
     }
   }
 
-  .main {
-    width: 700px;
-    height: 500px;
-    position: relative;
-  }
-
   h1 {
     font-size: 48px;
     font-weight: 800;
-    margin: 0;
+    margin: 0 initial;
     text-align: center;
     display: block;
   }
