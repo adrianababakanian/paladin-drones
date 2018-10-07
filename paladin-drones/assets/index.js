@@ -1,11 +1,8 @@
 function toggleNav() {
   if ($('#nav-icon3').hasClass("open")) {
-    // document.getElementById("mySidenav").style.width = "0";
     $(".sidenav").removeClass('expanded');
-    console.log("is open");
   } else {
     $(".sidenav").addClass('expanded');
-    console.log("not open");
   }
   $('#nav-icon3').toggleClass('open');
   $('#menu').toggleClass('open');

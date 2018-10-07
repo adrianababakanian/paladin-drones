@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +16,7 @@
 
   <body>
 
+    <!-- Navigation bar. -->
     <div class="header-wrap">
       <h3 class="logo-font" onClick="toggleLights()"><img class="logo" src="./assets/images/paladin.png"/><img class="logo dark" src="./assets/images/paladin_dark.png"/>Paladin</h3>
       <div id="nav-icon3" onClick="toggleNav()">
@@ -32,6 +34,7 @@
       </div>
     </div>
 
+    <!-- Home page. -->
     <div class="container main">
        <video width="320" height="240" autoplay loop muted>
          <source src="./assets/images/reel.mp4" type="video/mp4">
@@ -41,7 +44,6 @@
       <div class="intro">
         <h1>Paladin Drones</h1>
         <h2>We deploy autonomous drones to 911 calls.</h2>
-        <!-- <img class="test" src="./assets/images/illustration.png"/> -->
         <h2><a class="fire" href="#mission">
           <svg class="drone" id="drone_dark" width="25px" height="25px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
@@ -65,7 +67,11 @@
         <h2><a href="#mission"><i class="material-icons expand gray">expand_more</i></a></h2>
       </div>
     </div>
+
+    <!-- Content container. -->
     <div class="container content">
+
+      <!-- Mission. -->
       <article class="section-wrapper" id="mission">
         <div class="section">
           <h1> Mission </h1>
@@ -76,6 +82,7 @@
           <p><a href="#software" class="fire"><i class="material-icons">gps_fixed</i>Here's how we do it</div></a></p>
       </article>
 
+      <!-- Software. -->
       <article class="section-wrapper" id="software">
         <div class="section">
           <h1> Software </h1>
@@ -96,6 +103,7 @@
         </div>
         </article>
 
+      <!-- Team. -->
       <article class="section-wrapper" id="team">
         <div class="section">
           <h1>Team</h1>
@@ -124,6 +132,7 @@
         </div>
       </article>
 
+      <!-- Contact & press. -->
       <article class="section-wrapper" id="contact">
         <div class="section">
           <h1>Contact</h1>
@@ -138,41 +147,34 @@
           <h1>Press</h1>
           <p>Here're the latest articles on us, and what we've been up to. Contact us at team@paladindrones.io</p>
           <div class="entry">
-            <a href="">The Columbus Dispatch</a>
+            <a target="_blank" href="http://www.thisweeknews.com/news/20180711/berkeley-can-wait-olentangy-grad-has-business-to-run">The Columbus Dispatch</a>
             <p>"Berkeley can wait: Olentangy grad has business to run"</p>
           </div>
           <div class="entry">
-            <a href="">Daily Cal</a>
+            <a target="_blank" href="http://www.dailycal.org/2017/05/22/uc-berkeley-startup-fights-fire-drones/">Daily Cal</a>
             <p>"UC Berkeley startup fights fire with drones"</p>
           </div>
           <div class="entry">
-            <a href="">Penn Tech Review</a>
+            <a target="_blank" href="https://penntechreview.com/read/paladindrone">Penn Tech Review</a>
             <p>"Trevor Pennypacker: Paladin Drones"</p>
           </div>
           <div class="entry">
-            <a href="">Big Ideas @ Berkeley</a>
+            <a target="_blank" href="https://bigideas.berkeley.edu/winners/paladin-drones-uc-berkeley/">Big Ideas @ Berkeley</a>
             <p>"Paladin Drones (UC Berkeley)"</p>
           </div>
-
-
-
         </div>
       </article>
 
+      <!-- Firebase placeholder. -->
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
           // // The Firebase SDK is initialized and available here!
-          //
-          // firebase.auth().onAuthStateChanged(user => { });
-          // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-          // firebase.messaging().requestPermission().then(() => { });
-          // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-          //
           // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         });
       </script>
     </div>
+
   </body>
 
 </html>
