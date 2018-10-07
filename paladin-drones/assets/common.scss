@@ -50,8 +50,8 @@ body {
 }
 
 video {
-  height: 100vh;
-  width: auto;
+  min-height: 100vh;
+  min-width: 100vw;
   position: absolute;
   top: 0;
   z-index: -2;
@@ -65,10 +65,9 @@ video {
   position: fixed;
   top: 0;
   z-index: -1;
-  background: #1D1E21F2;
-  &.light {
-    background: #F9FBFFF2;
-  }
+  background: #1D1E21E0;
+  @media (max-width: 700px) { display: none; }
+  &.light { background: #F9FBFFE0; }
 }
 
 a {

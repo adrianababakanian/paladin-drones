@@ -32,8 +32,8 @@ body {
     background: #F9FBFF; }
 
 video {
-  height: 100vh;
-  width: auto;
+  min-height: 100vh;
+  min-width: 100vw;
   position: absolute;
   top: 0;
   z-index: -2; }
@@ -47,9 +47,12 @@ video {
   position: fixed;
   top: 0;
   z-index: -1;
-  background: #1D1E21F2; }
+  background: #1D1E21E0; }
+  @media (max-width: 700px) {
+    .shade {
+      display: none; } }
   .shade.light {
-    background: #F9FBFFF2; }
+    background: #F9FBFFE0; }
 
 a:link, a:active, a:visited, a:focus {
   text-decoration: none;
