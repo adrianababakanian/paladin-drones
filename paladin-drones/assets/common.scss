@@ -16,12 +16,19 @@ html {
   margin-left: 10px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: $background;
   font-family: Ubuntu;
   color: $font;
   overflow-x: hidden;
   margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   &.light {
     background: $font;
   }
@@ -238,7 +245,6 @@ body {
         font-weight: 600;
       }
     }
-    transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -315,6 +321,13 @@ body {
     @media (max-width: 700px) {
       display: block;
     }
+    .buffer {
+      display: none;
+      height: 120px;
+      @media (max-width: 700px) {
+        display: block;
+      }
+    }
     .nav-item {
       padding: 10px;
       font-weight: 400;
@@ -340,6 +353,8 @@ body {
   height: calc(100vh - 30px);
   background: $background;
   margin: 0 40px 0 0;
+  position: absolute;
+  left: 0;
 
   &.content {
     display: initial;
@@ -351,15 +366,9 @@ body {
   &.main {
     top: 0;
     z-index: 2;
-    transition: all 0.5s ease;
     &.shift {
       top: -100vh;
     }
-  }
-
-  &#content {
-    z-index: 1;
-    top: 0;
   }
 
   .main {
@@ -589,7 +598,7 @@ body {
        margin-left: -10px;
      }
      @media (max-width: 700px) {
-       width: calc(100% - 20px);
+       width: calc(100% - 40px);
        margin-left: 0;
        .column {
          width: calc(100% - 60px);
