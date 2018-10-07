@@ -31,42 +31,40 @@ function toggleNav() {
    }
  }
 
- // $(document).ready(function(){
- //   $section = ($(this).attr("href"));
- //   $($section).toggleClass('show');
- //   $("#m_link").click(function(){
- //        $('#mission').addClass('show');
- //        $('#software').removeClass('show');
- //        $('#team').removeClass('show');
- //        $('#contact').removeClass('show');
- //        $('#press').removeClass('show');
- //    });
- //    $("#s_link").click(function(){
- //      $('#software').addClass('show');
- //      $('#mission').removeClass('show');
- //      $('#team').removeClass('show');
- //      $('#contact').removeClass('show');
- //      $('#press').removeClass('show');
- //     });
- //     $("#t_link").click(function(){
- //       $('#team').addClass('show');
- //       $('#mission').removeClass('show');
- //       $('#software').removeClass('show');
- //       $('#contact').removeClass('show');
- //       $('#press').removeClass('show');
- //      });
- //    $("#c_link").click(function(){
- //      $('#contact').addClass('show');
- //      $('#mission').removeClass('show');
- //      $('#software').removeClass('show');
- //      $('#team').removeClass('show');
- //      $('#press').removeClass('show');
- //     });
- //     $("#p_link").click(function(){
- //       $('#press').addClass('show');
- //       $('#mission').removeClass('show');
- //       $('#software').removeClass('show');
- //       $('#team').removeClass('show');
- //       $('#contact').removeClass('show');
- //      });
- // });
+ $(document).ready(function(){
+   $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+ });

@@ -20,6 +20,21 @@ html {
   overflow-x: hidden;
 }
 
+.test {
+  width: 400px;
+  animation: float 4s ease-in-out infinite;
+}
+
+*:focus {
+    outline: none;
+}
+
+@keyframes float {
+  0% {transform: rotate(-4deg)}
+  60% {transform: rotate(2deg)}
+  100% {transform: rotate(-4deg);}
+}
+
 body {
   background: $background;
   font-family: Ubuntu;
@@ -396,53 +411,56 @@ body {
     text-align: center;
 
     &.fire {
-      font-size: 16px;
-      max-width: 180px;
-      color: $fire;
-      transition: background 0.3s ease-in-out;
-      padding: 10px 20px;
-      background: $section;
-      border-radius: 4px;
-      margin: 140px auto 0 auto;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .material-icons { padding-right: 10px}
-      &:hover {
-        background: $em;
-      }
-      &.light {
-        background: $fire;
-        color: $font;
+      a {
+        font-size: 16px;
+        max-width: 180px;
+        color: $fire;
+        transition: background 0.3s ease-in-out;
+        padding: 10px 20px;
+        background: $section;
+        border-radius: 4px;
+        //margin: 140px auto 0 auto;
+
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .material-icons { padding-right: 10px}
         &:hover {
-          background: $dark_fire;
+          background: $em;
+        }
+        &.light {
+          background: $fire;
+          color: $font;
+          &:hover {
+            background: $dark_fire;
+          }
+          .drone {
+            svg g#drone { fill: white;}
+
+          }
         }
         .drone {
-          svg g#drone { fill: white;}
-
-        }
-      }
-      .drone {
-        width: 25px;
-        padding: 0 5px;
-        transform: rotate(45deg);
-        svg {
-          fill: $fire !important;
-        }
-        &#drone_dark {
-          display: inline-block;
-          &.light {
-            display: none;
+          width: 25px;
+          padding: 0 5px;
+          transform: rotate(45deg);
+          svg {
+            fill: $fire !important;
           }
-        }
-        &#drone_light {
-          display: none;
-          &.light {
+          &#drone_dark {
             display: inline-block;
+            &.light {
+              display: none;
+            }
           }
-        }
+          &#drone_light {
+            display: none;
+            &.light {
+              display: inline-block;
+            }
+          }
 
+        }
       }
     }
   }
