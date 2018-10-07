@@ -11,6 +11,11 @@ $dark_fire: #F7703D;
 
 $blue: #4264fb;
 
+html {
+  width: 100vw;
+  margin-left: 10px;
+}
+
 body {
   background: $background;
   font-family: Ubuntu;
@@ -110,6 +115,9 @@ body {
   right: 0;
   margin: 10px 20px;
   z-index: 1000;
+  @media (max-width: 700px) {
+
+  }
 }
 
 .back {
@@ -202,6 +210,15 @@ body {
     &.light {
       background: $font;
     }
+    &.expanded {
+      width: 400px;
+      @media (max-width: 700px) {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        position: fixed;
+      }
+    }
 }
 
 /* The navigation menu links */
@@ -236,12 +253,6 @@ body {
     margin-top: 2px;
     transform: scale(1.4);
     font-weight: 800;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-right .5s;
-    padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -301,12 +312,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 700px) {
+      display: block;
+    }
     .nav-item {
       padding: 10px;
       font-weight: 400;
       cursor: pointer;
       &:hover {
         font-weight: 600;
+      }
+      @media (max-width: 700px) {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin: 20px 0;
       }
     }
   }
@@ -425,8 +445,6 @@ body {
   }
 
   .section {
-  // width: calc(100% - 100px);
-   //max-height: calc(80vh - 40px);
    padding: 20px 0;
    border-radius: 4px;
    position: relative;
@@ -490,21 +508,13 @@ body {
      font-family: Ubuntu;
      font-weight: 300;
      width: calc(100% - 120px);
-     // a {
-     //   text-decoration: none;
-     //   background: $em;
-     //   padding: 8px 10px;
-     //   border-radius: 4px;
-     //   color: $fire;
-     //   cursor: pointer;
-     //   font-weight: 300;
-     //   transition: background 0.3s ease-in-out;
-     //   padding: 10px;
-     //   &:hover {
-     //     background: $em_hov;
-     //     font-weight: 300;
-     //   }
-     //  }
+     transition: font-style 0.5s ease-in-out;
+     em {
+       text-decoration: none;
+       color: $fire;
+       font-weight: 300;
+       font-style: normal;
+     }
 
      .fire {
        margin: 0;
@@ -652,42 +662,6 @@ body {
            display: block;
          }
        }
-       // .member {
-       //   background: $section;
-       //   padding-bottom: 20px;
-       //   padding-top: 20px;
-       //   h2 {
-       //     text-align: center;
-       //     display: flex;
-       //     align-items: center;
-       //     justify-content: center;
-       //     &.arrow {
-       //       padding: 10px 0;
-       //     }
-       //   }
-       //   &.light {
-       //     background: $hi_dark;
-       //   }
-       //   .info {
-       //     padding: 20px 0 0 0;
-       //   }
-       //   p {
-       //     text-align: left;
-       //     text-justify: inter-word;
-       //     width: calc(100% - 80px);
-       //     padding: 0 40px;
-       //     margin: 0;
-       //     @media (max-width: 1200px) {
-       //       padding: 0 20px;
-       //     }
-       //   }
-       //
-       //   @media (max-width: 1200px) {
-       //     width: calc(100%);
-       //
-       //   }
-       //
-       // }
      }
    }
 

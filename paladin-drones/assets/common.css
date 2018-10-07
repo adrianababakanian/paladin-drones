@@ -1,3 +1,7 @@
+html {
+  width: 100vw;
+  margin-left: 10px; }
+
 body {
   background: #1D1E21;
   font-family: Ubuntu;
@@ -173,6 +177,14 @@ body.light::-webkit-scrollbar-thumb {
   padding-top: 10px; }
   .sidenav.light {
     background: #F9FBFF; }
+  .sidenav.expanded {
+    width: 400px; }
+    @media (max-width: 700px) {
+      .sidenav.expanded {
+        height: 100vh;
+        width: calc(100vw + 20px);
+        display: flex;
+        position: fixed; } }
 
 /* The navigation menu links */
 .sidenav a {
@@ -200,11 +212,6 @@ body.light::-webkit-scrollbar-thumb {
   margin-top: 2px;
   transform: scale(1.4);
   font-weight: 800; }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-right .5s;
-  padding: 20px; }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -257,12 +264,21 @@ body.light::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 700px) {
+      .header-wrap .nav-content {
+        display: block; } }
     .header-wrap .nav-content .nav-item {
       padding: 10px;
       font-weight: 400;
       cursor: pointer; }
       .header-wrap .nav-content .nav-item:hover {
         font-weight: 600; }
+      @media (max-width: 700px) {
+        .header-wrap .nav-content .nav-item {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          margin: 20px 0; } }
 
 .container {
   display: flex;
@@ -396,7 +412,13 @@ body.light::-webkit-scrollbar-thumb {
       line-height: 36px;
       font-family: Ubuntu;
       font-weight: 300;
-      width: calc(100% - 120px); }
+      width: calc(100% - 120px);
+      transition: font-style 0.5s ease-in-out; }
+      .container .section p em {
+        text-decoration: none;
+        color: #FF895C;
+        font-weight: 300;
+        font-style: normal; }
       .container .section p .fire {
         margin: 0;
         display: inline-block;
