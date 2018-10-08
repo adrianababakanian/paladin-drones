@@ -435,7 +435,7 @@ body {
   h1 {
     font-size: 48px;
     font-weight: 800;
-    margin: 0 initial;
+    margin: 0;
     text-align: center;
     display: block;
   }
@@ -447,6 +447,9 @@ body {
     max-width: 240px;
     margin: 20px auto;
     text-align: center;
+
+    &#tagline { max-width: 320px }
+    &#learnmore { margin-top: 40px }
 
     a.fire {
         font-weight: 300;
@@ -769,7 +772,7 @@ body {
      }
    }
 
-   .entry {
+   .entry a {
      width: 100%;
      overflow: auto;
      margin: 20px 0;

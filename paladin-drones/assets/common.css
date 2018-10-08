@@ -359,7 +359,7 @@ body.light::-webkit-scrollbar-thumb {
   .container h1 {
     font-size: 48px;
     font-weight: 800;
-    margin: 0 initial;
+    margin: 0;
     text-align: center;
     display: block; }
   .container h2 {
@@ -369,6 +369,10 @@ body.light::-webkit-scrollbar-thumb {
     max-width: 240px;
     margin: 20px auto;
     text-align: center; }
+    .container h2#tagline {
+      max-width: 320px; }
+    .container h2#learnmore {
+      margin-top: 40px; }
     .container h2 a.fire {
       font-weight: 300;
       font-size: 16px;
@@ -613,18 +617,18 @@ body.light::-webkit-scrollbar-thumb {
         .container .section .elsewhere .else img {
           width: 100%;
           height: auto; }
-    .container .section .entry {
+    .container .section .entry a {
       width: 100%;
       overflow: auto;
       margin: 20px 0; }
-      .container .section .entry a {
+      .container .section .entry a a {
         margin: 0; }
-      .container .section .entry p {
+      .container .section .entry a p {
         display: inline-block;
         width: initial;
         margin: 0;
         padding: 0 20px; }
-      .container .section .entry > * {
+      .container .section .entry a > * {
         float: left; }
 
 /*# sourceMappingURL=common.css.map */
