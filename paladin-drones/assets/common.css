@@ -32,7 +32,8 @@ body {
   margin: 0;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  transition: background 0.3s ease-in-out; }
   body.light {
     background: #F9FBFF; }
 
@@ -53,7 +54,8 @@ video {
   top: 0;
   z-index: -1;
   -webkit-transform: translate3d(0, 0, 0);
-  background: #1D1E21E0; }
+  background: #1D1E21E0;
+  transition: background 0.3s ease-in-out; }
   .shade.light {
     background: #F9FBFFE0; }
 
@@ -249,7 +251,8 @@ a:link, a:active, a:visited, a:focus {
   justify-content: flex-end;
   align-items: center;
   z-index: 3;
-  margin: 0; }
+  margin: 0;
+  transition: background 0.3s ease-in-out; }
   .header-wrap .logo-font {
     z-index: 20;
     margin: 0;
