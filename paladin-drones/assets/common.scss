@@ -772,20 +772,41 @@ body {
      }
    }
 
-   .entry a {
-     width: 100%;
-     overflow: auto;
-     margin: 20px 0;
-     a {
-       margin: 0;
+   a {
+     &.entry {
+       width: 100%;
+       display: block;
+       overflow: auto;
+       margin: 20px 0;
+       background: transparent;
+       padding: 0;
+       &:hover {
+         background: transparent;
+         .blurb {
+           font-weight: 600;
+           background: $em_hov;
+         }
+       }
+      .blurb {
+         text-decoration: none;
+         color: $font;
+         background: $em;
+         padding: 8px 10px;
+         border-radius: 4px;
+         margin-left: 50px;
+         cursor: pointer;
+         font-weight: 400;
+         transition: background 0.3s ease-in-out;
+       }
+       p {
+         display: inline-block;
+         width: initial;
+         margin: 0;
+         padding: 0 20px;
+       }
+       > * { float: left}
+
      }
-     p {
-       display: inline-block;
-       width: initial;
-       margin: 0;
-       padding: 0 20px;
-     }
-     > * { float: left}
    }
 
 

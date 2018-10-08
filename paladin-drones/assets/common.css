@@ -617,18 +617,34 @@ body.light::-webkit-scrollbar-thumb {
         .container .section .elsewhere .else img {
           width: 100%;
           height: auto; }
-    .container .section .entry a {
+    .container .section a.entry {
       width: 100%;
+      display: block;
       overflow: auto;
-      margin: 20px 0; }
-      .container .section .entry a a {
-        margin: 0; }
-      .container .section .entry a p {
+      margin: 20px 0;
+      background: transparent;
+      padding: 0; }
+      .container .section a.entry:hover {
+        background: transparent; }
+        .container .section a.entry:hover .blurb {
+          font-weight: 600;
+          background: #535155; }
+      .container .section a.entry .blurb {
+        text-decoration: none;
+        color: #F9FBFF;
+        background: #3C3A3E;
+        padding: 8px 10px;
+        border-radius: 4px;
+        margin-left: 50px;
+        cursor: pointer;
+        font-weight: 400;
+        transition: background 0.3s ease-in-out; }
+      .container .section a.entry p {
         display: inline-block;
         width: initial;
         margin: 0;
         padding: 0 20px; }
-      .container .section .entry a > * {
+      .container .section a.entry > * {
         float: left; }
 
 /*# sourceMappingURL=common.css.map */
