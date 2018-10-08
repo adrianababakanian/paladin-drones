@@ -19,6 +19,11 @@ html {
     transform: rotate(2deg); }
   100% {
     transform: rotate(-4deg); } }
+.add_background {
+  background: #1D1E21; }
+  .add_background.light {
+    background: #F9FBFF; }
+
 body {
   background: #1D1E21;
   font-family: Ubuntu;
@@ -37,9 +42,6 @@ video {
   width: auto;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: -2; }
   @media (max-width: 700px) {
     video {
@@ -275,10 +277,7 @@ body.light::-webkit-scrollbar-thumb {
   justify-content: flex-end;
   align-items: center;
   z-index: 3;
-  background: #1D1E21;
   margin: 0; }
-  .header-wrap.light {
-    background: #F9FBFF; }
   .header-wrap .logo-font {
     z-index: 20;
     margin: 0;

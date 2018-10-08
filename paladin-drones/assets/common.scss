@@ -35,6 +35,13 @@ html {
   100% {transform: rotate(-4deg);}
 }
 
+.add_background {
+  background: $background;
+  &.light {
+    background: $font;
+  }
+}
+
 body {
   background: $background;
   font-family: Ubuntu;
@@ -55,9 +62,6 @@ video {
   width: auto;
   height: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: -2;
   @media (max-width: 700px) {
     display: none;
@@ -317,10 +321,10 @@ body {
   justify-content: flex-end;
   align-items: center;
   z-index: 3;
-  background: $background;
+  //background: $background;
   margin: 0;
   &.light {
-    background: $font;
+    //background: $font;
   }
   .logo-font {
     z-index: 20;
