@@ -90,24 +90,24 @@ a {
   }
 }
 
-body::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-.column::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-body {
-  &::-webkit-scrollbar { background: none }
-  &::-webkit-scrollbar-corner { background: none }
-  &::-webkit-scrollbar-track { background: none }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 2px;
-    background-color: $em;
-  }
-  &.light {
-    &::-webkit-scrollbar-thumb { background-color: $hi_dark; }
-  }
-}
+// body::-webkit-scrollbar-track {
+//   background: none;
+// }
+// .column::-webkit-scrollbar-track {
+//   background: none;
+// }
+// body {
+//   &::-webkit-scrollbar { background: none }
+//   &::-webkit-scrollbar-corner { background: none }
+//   &::-webkit-scrollbar-track { background: none }
+//   &::-webkit-scrollbar-thumb {
+//     border-radius: 2px;
+//     background-color: $em;
+//   }
+//   &.light {
+//     &::-webkit-scrollbar-thumb { background-color: $hi_dark; }
+//   }
+// }
 .column {
   &::-webkit-scrollbar { background: none }
   &::-webkit-scrollbar-corner { background: none }
@@ -121,7 +121,7 @@ body {
   }
 }
 .nav-content::-webkit-scrollbar-track {
-  background-color: transparent;
+  background: none;
 }
 .nav-content {
   &::-webkit-scrollbar { background: none }
@@ -264,6 +264,10 @@ body {
         width: 100vw;
         display: flex;
         position: fixed;
+        background: $background;
+        &.light {
+          background: $font;
+        }
       }
     }
 }
@@ -450,7 +454,7 @@ body {
     margin: 20px auto;
     text-align: center;
 
-    &#tagline { 
+    &#tagline {
       max-width: 320px;
       @media (max-width: 700px) {max-width: 235px;}
     }

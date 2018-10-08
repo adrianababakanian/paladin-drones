@@ -11,7 +11,7 @@ function toggleNav() {
  function toggleLights() {
    $('h1, h2, h3, h4, p, .logo-font, #nav-icon3 span').toggleClass('back');
 
-   $('.section, body, .container, .fire, .sidenav, .sidenav a, .section::-webkit-scrollbar-thumb, .placeholder, .gray, .member, .column, .header-wrap, #drone_dark, #drone_light, .logo, .shade, .add_background').toggleClass('light');
+   $('.section, body, .container, .fire, .sidenav, .sidenav a, .section::-webkit-scrollbar-thumb, .placeholder, .gray, .member, .column, .header-wrap, #drone_dark, #drone_light, .logo, .shade, .add_background, .expanded').toggleClass('light');
  }
 
  function testing() {
