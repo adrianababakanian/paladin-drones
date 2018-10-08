@@ -42,7 +42,9 @@ video {
   width: auto;
   height: auto;
   position: absolute;
-  z-index: -2; }
+  z-index: -2;
+  -webkit-transform: translate3d(0, 0, -2);
+  overflow: hidden; }
 
 .shade {
   width: 100vw;
@@ -50,6 +52,7 @@ video {
   position: absolute;
   top: 0;
   z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
   background: #1D1E21E0; }
   .shade.light {
     background: #F9FBFFE0; }

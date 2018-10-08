@@ -63,6 +63,8 @@ video {
   height: auto;
   position: absolute;
   z-index: -2;
+  -webkit-transform: translate3d(0,0,-2);
+  overflow: hidden;
   // @media (max-width: 700px) {
   //   display: none;
   // }
@@ -73,6 +75,7 @@ video {
   position: absolute;
   top: 0;
   z-index: -1;
+  -webkit-transform: translate3d(0,0,0);
   background: #1D1E21E0;
   // @media (max-width: 700px) { display: none; }
   &.light { background: #F9FBFFE0; }
