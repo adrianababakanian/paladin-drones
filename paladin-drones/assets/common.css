@@ -332,7 +332,8 @@ body.light::-webkit-scrollbar-thumb {
   width: 100vw;
   height: 100vh;
   margin: 0 40px 0 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   @media (max-width: 700px) {
     .container {
       background: #1D1E21;
@@ -360,7 +361,7 @@ body.light::-webkit-scrollbar-thumb {
   .container h1 {
     font-size: 48px;
     font-weight: 800;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     display: block; }
   .container h2 {
@@ -372,6 +373,9 @@ body.light::-webkit-scrollbar-thumb {
     text-align: center; }
     .container h2#tagline {
       max-width: 320px; }
+      @media (max-width: 700px) {
+        .container h2#tagline {
+          max-width: 235px; } }
     .container h2#learnmore {
       margin-top: 40px; }
     .container h2 a.fire {

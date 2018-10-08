@@ -408,6 +408,7 @@ body {
   height: 100vh;
   margin: 0 40px 0 0;
   position: relative;
+  overflow: hidden;
   @media(max-width: 700px) {
     background: $background;
     position: absolute;
@@ -436,7 +437,7 @@ body {
   h1 {
     font-size: 48px;
     font-weight: 800;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     display: block;
   }
@@ -449,7 +450,10 @@ body {
     margin: 20px auto;
     text-align: center;
 
-    &#tagline { max-width: 320px }
+    &#tagline { 
+      max-width: 320px;
+      @media (max-width: 700px) {max-width: 235px;}
+    }
     &#learnmore { margin-top: 40px }
 
     a.fire {
