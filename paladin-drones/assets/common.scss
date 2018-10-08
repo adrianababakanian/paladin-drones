@@ -63,18 +63,18 @@ video {
   height: auto;
   position: absolute;
   z-index: -2;
-  @media (max-width: 700px) {
-    display: none;
-  }
+  // @media (max-width: 700px) {
+  //   display: none;
+  // }
 }
 .shade {
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: -1;
   background: #1D1E21E0;
-  @media (max-width: 700px) { display: none; }
+  // @media (max-width: 700px) { display: none; }
   &.light { background: #F9FBFFE0; }
 }
 
@@ -248,19 +248,15 @@ body {
 }
 
 .sidenav {
-    height: 30px; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 30px;
+    width: 0; /* Changing this with JavaScript */
+    position: fixed;
+    z-index: 1;
+    top: 0;
     right: 0;
-    background-color: $background; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden;
+    transition: width 0.5s;
     padding-top: 10px;
-    &.light {
-      background: $font;
-    }
     &.expanded {
       width: 400px;
       @media (max-width: 700px) {
@@ -409,7 +405,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: calc(100vh - 30px);
+  height: 100vh;
   margin: 0 40px 0 0;
   @media(max-width: 700px) {
     background: $background;
@@ -461,6 +457,7 @@ body {
         padding: 10px 20px;
         background: $section;
         border-radius: 4px;
+        transform: translateX(10px);
         //margin: 140px auto 0 auto;
 
         cursor: pointer;

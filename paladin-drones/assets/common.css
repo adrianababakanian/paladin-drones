@@ -43,20 +43,14 @@ video {
   height: auto;
   position: absolute;
   z-index: -2; }
-  @media (max-width: 700px) {
-    video {
-      display: none; } }
 
 .shade {
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: -1;
   background: #1D1E21E0; }
-  @media (max-width: 700px) {
-    .shade {
-      display: none; } }
   .shade.light {
     background: #F9FBFFE0; }
 
@@ -207,25 +201,15 @@ body.light::-webkit-scrollbar-thumb {
 
 .sidenav {
   height: 30px;
-  /* 100% Full-height */
   width: 0;
-  /* 0 width - change this with JavaScript */
+  /* Changing this with JavaScript */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Stay on top */
   top: 0;
-  /* Stay at the top */
   right: 0;
-  background-color: #1D1E21;
-  /* Black*/
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   transition: width 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
   padding-top: 10px; }
-  .sidenav.light {
-    background: #F9FBFF; }
   .sidenav.expanded {
     width: 400px; }
     @media (max-width: 700px) {
@@ -346,7 +330,7 @@ body.light::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: calc(100vh - 30px);
+  height: 100vh;
   margin: 0 40px 0 0; }
   @media (max-width: 700px) {
     .container {
@@ -394,6 +378,7 @@ body.light::-webkit-scrollbar-thumb {
       padding: 10px 20px;
       background: #242528;
       border-radius: 4px;
+      transform: translateX(10px);
       cursor: pointer;
       display: flex;
       align-items: center;
